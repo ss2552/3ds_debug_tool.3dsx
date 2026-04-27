@@ -18,4 +18,11 @@ jobs:
           name: ダウンロード
           compression-level: 0
           path: ./
-            
+
+      - name: Cache Primes
+        id: cache-primes
+        uses: actions/cache@v5
+        with:
+          path: ./
+          key: ${{ runner.os }}-primes
+              
